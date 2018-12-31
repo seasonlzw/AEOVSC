@@ -15,6 +15,38 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "build-utility-bin-debug",
+            "command": "powershell",
+            "type": "process",
+            "args": [
+                "./buildBin.ps1",
+                "Utility",
+                "win",
+                "-c",
+                "Debug"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-utility-bin-release",
+            "command": "powershell",
+            "type": "process",
+            "args": [
+                "./buildBin.ps1",
+                "Utility",
+                "win",
+                "-c",
+                "Release"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": "$msCompile"
         }
     ]
 }
